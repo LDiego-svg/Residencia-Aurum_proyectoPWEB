@@ -1,0 +1,265 @@
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fffbea;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset y tipografía */
+body, h1, h2, h5, p, ol, li, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 3rem;
+  color: #daa520;
+  font-weight: 900;
+  margin: 40px 0 20px;
+}
+
+/* Menú */
+.menu {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.menu ol {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  margin: 0 12px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.menu-item a:hover,
+.menu-item.active a {
+  background-color: #444;
+  color: #ffd700;
+}
+
+/* Login area en el navbar */
+#loginArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#loginArea span {
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Contenido principal */
+.descripcion {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+/* Testimonios / tarjetas */
+.testimonios h2 {
+  color: #b8860b;
+  font-weight: bold;
+}
+
+.tarjeta {
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.02);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.nombre {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #b8860b;
+}
+
+.resena {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 5px;
+  quotes: "“" "”";
+}
+
+.resena::before {
+  content: open-quote;
+}
+.resena::after {
+  content: close-quote;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-top: auto; /* Esto lo empuja al fondo cuando sea necesario */
+}
+
+.btn-dorado {
+  background-color: #daa520;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.btn-dorado:hover {
+  background-color: #c89e1d;
+  color: white;
+}
+.btn-primary {
+  background-color: #daa520;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #c6961d;
+  color: rgb(0, 0, 0);
+}
+
+/* Slogan */
+.slogan {
+  background: linear-gradient(90deg, #daa520, #dab820d3);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+/* Beneficios */
+.beneficios li {
+  margin-bottom: 0.7rem;
+}
+
+/* Servicios */
+.servicios .icono-servicio {
+  font-size: 2.5rem;
+  color: #daa520;
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonios pequeños */
+.testimonios-pequenos {
+  background-color: #fff8dc;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.testimonios-pequenos .blockquote {
+  background: transparent;
+  border-left: none;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonios-pequenos .blockquote p {
+  color: #333;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.testimonios-pequenos .blockquote-footer {
+  color: #666;
+  font-size: 0.9rem;
+  background: transparent;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+/* FAQ */
+.faq dt {
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.faq dd {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Carousel */
+#carouselResidencias {
+  max-width: 900px;
+}
+
+#carouselResidencias .carousel-item {
+  height: 500px;
+}
+
+#carouselResidencias .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #carouselResidencias .carousel-item {
+    height: 300px;
+  }
+  
+  .titulo {
+    font-size: 2rem;
+  }
+  
+  .menu-item {
+    margin: 0 6px;
+  }
+  
+  .menu-item a {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .slogan {
+    font-size: 1.2rem;
+    padding: 2rem 1rem;
+  }
+}
